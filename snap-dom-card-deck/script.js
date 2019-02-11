@@ -27,6 +27,12 @@ let testArray = [{
     "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
 }]
 
+const card1 = document.getElementById("card1");
+const card2 = document.getElementById("card1");
+const card3 = document.getElementById("card1");
+const card4 = document.getElementById("card1");
+const card5 = document.getElementById("card1");
+
 function insertIntoCard (array) {
     
 }
