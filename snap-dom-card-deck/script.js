@@ -25,25 +25,43 @@ let testArray = [{
     "id": 5,
     "title": "nesciunt quas odio",
     "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
-}]
+}];
 
-const card1 = document.getElementById("card1");
-const card2 = document.getElementById("card2");
-const card3 = document.getElementById("card3");
-const card4 = document.getElementById("card4");
-const card5 = document.getElementById("card5");
 
-const allCards = [card1, card2, card3, card4, card5];
+window.onload=function() {
+ 
+    const cardTitle1 = document.querySelector('.card1 .card-title');
+    const cardBody1 = document.querySelector('.card1 .card-text');
+    
+    const cardTitle2 = document.querySelector('.card2 .card-title');
+    const cardBody2 = document.querySelector('.card2 .card-text');
+    
+    const cardTitle3 = document.querySelector('.card3 .card-title');
+    const cardBody3 = document.querySelector('.card3 .card-text');
+    
+    const cardTitle4 = document.querySelector('.card4 .card-title');
+    const cardBody4 = document.querySelector('.card4 .card-text');
+    
+    const cardTitle5 = document.querySelector('.card5 .card-title');
+    const cardBody5 = document.querySelector('.card5 .card-text');
+  
+  cardTitle1.innerHTML = testArray[0]["title"];
+  cardBody1.innerHTML = testArray[0]["body"];
+  
+  cardTitle2.innerHTML = testArray[1]["title"];
+  cardBody2.innerHTML = testArray[1]["body"];
+  
+  cardTitle3.innerHTML = testArray[2]["title"];
+  cardBody3.innerHTML = testArray[2]["body"];
+  
+  cardTitle4.innerHTML = testArray[3]["title"];
+  cardBody4.innerHTML = testArray[3]["body"];
+  
+  cardTitle5.innerHTML = testArray[4]["title"];
+  cardBody5.innerHTML = testArray[4]["body"];
+ 
+};
 
-function insertIntoCardDeck (array) {
-    array.forEach((element) => {
-        for (let i = 0; i < cards.length; i++) {
-            document.h5.innerHTML = element[title];
-        }
-    })
-}
-
-insertIntoCardDeck(testArray);
 
 
 
