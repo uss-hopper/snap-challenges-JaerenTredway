@@ -28,14 +28,22 @@ let testArray = [{
 }]
 
 const card1 = document.getElementById("card1");
-const card2 = document.getElementById("card1");
-const card3 = document.getElementById("card1");
-const card4 = document.getElementById("card1");
-const card5 = document.getElementById("card1");
+const card2 = document.getElementById("card2");
+const card3 = document.getElementById("card3");
+const card4 = document.getElementById("card4");
+const card5 = document.getElementById("card5");
 
-function insertIntoCard (array) {
-    
+const allCards = [card1, card2, card3, card4, card5];
+
+function insertIntoCardDeck (array) {
+    array.forEach((element) => {
+        for (let i = 0; i < cards.length; i++) {
+            document.h5.innerHTML = element[title];
+        }
+    })
 }
+
+insertIntoCardDeck(testArray);
 
 
 
