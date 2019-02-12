@@ -27,7 +27,7 @@ let testArray = [{
     "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
 }];
 
-
+//My first attempt, with no iteration method:
 window.onload = function() {
 
     const cardTitle1 = document.querySelector('.card1 .card-title');
@@ -65,21 +65,24 @@ window.onload = function() {
 };
 
 
-//TODO: make an array for the constants and a function that interates through that array and iterates through the testArray that was given.
-
+//Another way of doing it using .map():
 window.onload = () => {
         let cardDeck = testArray.map((index) => {
-            return `
+            return (`
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">${index.title}</h5>
                     <p class="card-text">${index.body}</p>
                   </div>
                 </div>
-                `
+            `)
         });
+            console.log(cardDeck);
         let target = document.getElementById('target');
-        target.innerHTML = cardDeck;
+            console.log(target);
+        target.innerHTML = cardDeck.join('');
+            console.log(target);
     };
-    
     // .join("\r\n");
+    
+    //TODO: make a reduce() version
