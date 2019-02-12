@@ -28,41 +28,58 @@ let testArray = [{
 }];
 
 
-window.onload=function() {
- 
+window.onload = function() {
+
     const cardTitle1 = document.querySelector('.card1 .card-title');
     const cardBody1 = document.querySelector('.card1 .card-text');
-    
+
     const cardTitle2 = document.querySelector('.card2 .card-title');
     const cardBody2 = document.querySelector('.card2 .card-text');
-    
+
     const cardTitle3 = document.querySelector('.card3 .card-title');
     const cardBody3 = document.querySelector('.card3 .card-text');
-    
+
     const cardTitle4 = document.querySelector('.card4 .card-title');
     const cardBody4 = document.querySelector('.card4 .card-text');
-    
+
     const cardTitle5 = document.querySelector('.card5 .card-title');
     const cardBody5 = document.querySelector('.card5 .card-text');
-  
-  cardTitle1.innerHTML = testArray[0]["title"];
-  cardBody1.innerHTML = testArray[0]["body"];
-  
-  cardTitle2.innerHTML = testArray[1]["title"];
-  cardBody2.innerHTML = testArray[1]["body"];
-  
-  cardTitle3.innerHTML = testArray[2]["title"];
-  cardBody3.innerHTML = testArray[2]["body"];
-  
-  cardTitle4.innerHTML = testArray[3]["title"];
-  cardBody4.innerHTML = testArray[3]["body"];
-  
-  cardTitle5.innerHTML = testArray[4]["title"];
-  cardBody5.innerHTML = testArray[4]["body"];
- 
+
+    const cardDeck = [cardTitle1, ]
+
+    cardTitle1.innerHTML = testArray[0]["title"];
+    cardBody1.innerHTML = testArray[0]["body"];
+
+    cardTitle2.innerHTML = testArray[1]["title"];
+    cardBody2.innerHTML = testArray[1]["body"];
+
+    cardTitle3.innerHTML = testArray[2]["title"];
+    cardBody3.innerHTML = testArray[2]["body"];
+
+    cardTitle4.innerHTML = testArray[3]["title"];
+    cardBody4.innerHTML = testArray[3]["body"];
+
+    cardTitle5.innerHTML = testArray[4]["title"];
+    cardBody5.innerHTML = testArray[4]["body"];
+
 };
 
 
+//TODO: make an array for the constants and a function that interates through that array and iterates through the testArray that was given.
 
-
-
+window.onload = () => {
+        let cardDeck = testArray.map((index) => {
+            return `
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">${index.title}</h5>
+                    <p class="card-text">${index.body}</p>
+                  </div>
+                </div>
+                `
+        });
+        let target = document.getElementById('target');
+        target.innerHTML = cardDeck;
+    };
+    
+    // .join("\r\n");
