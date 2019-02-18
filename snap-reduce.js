@@ -1,9 +1,16 @@
+//snap-reduce
 let testArray = [1,2,3,5,8,13,21,34];
 
-//using reduce multiply the array
-
+//using reduce to multiply an array, with a function declaration:
 function multiplier(array) {
 	return array.reduce((acc, cur) => acc * cur);
 };
 
-multiplier(testArray);
+console.log(multiplier(testArray));
+
+
+//another method using a function expression:
+const multiplier2 = array => array.reduce((acc, cur) => acc * cur);
+
+console.log(multiplier2(testArray));
+
