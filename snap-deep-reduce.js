@@ -226,6 +226,7 @@ let testArray = [{
     }
 }];
 
+console.log("\nUsing a for loop:");
 function getGeo (array) {
    let newArray = [];
 
@@ -235,3 +236,10 @@ function getGeo (array) {
 }
    console.log(getGeo(testArray));
 
+console.log("\nUsing reduce():");
+function getGeoByReduce (array) {
+   let newArray = array.reduce( (acc, cur) =>
+       acc + cur["address"]["geo"] ); 
+   return newArray;
+}   
+   console.log(getGeoByReduce(testArray));
