@@ -226,12 +226,12 @@ let testArray = [{
     }
 }];
 
-
+function getGeo (array) {
    let newArray = [];
 
-   for (i = 0; i < testArray.length; i++) {
-       newArray.push(testArray[i]["address"]["geo"]);
-   }
-
-   console.log(newArray);
+   for (i = 0; i < array.length; i++) {
+       newArray.push(array[i]["address"]["geo"]);
+   } return newArray;
+}
+   console.log(getGeo(testArray));
 
