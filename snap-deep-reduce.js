@@ -243,3 +243,9 @@ function getGeoByReduce (array) {
    return newArray;
 }   
    console.log(getGeoByReduce(testArray));
+   
+let allGeo = testArray.reduce(function(accumulator, currentValue) {
+ return [accumulator, currentValue["address"]["geo"]];
+}, ['initializer']);
+
+console.log(allGeo);   
